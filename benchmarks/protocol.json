@@ -1,0 +1,37 @@
+{
+  "protocol_version": 1,
+  "horizons": [32, 64, 128],
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7],
+  "charges": ["1/16", "1/4", "1", "4"],
+  "families": ["random_walk", "burst_plateau", "regime_switch"],
+  "policies": ["offline", "fixed", "anytime", "clipped", "always", "initial"],
+  "initial_state": "0",
+  "random_generator": "random.Random(seed), independently initialized for each horizon and family",
+  "random_walk": {
+    "increments": ["-1/8", "0", "1/8"],
+    "sampling": "uniform independent choice at each index t=1,...,T-1"
+  },
+  "burst_plateau": {
+    "start": "randrange(1,T//3+1)",
+    "width": "choice([3,4,5])",
+    "amplitude": "choice([-1,1])*(2*seed+1)/4",
+    "path": "amplitude*min(max(t-start+1,0),width)/width"
+  },
+  "regime_switch": {
+    "level_changes": "3+seed%2",
+    "change_indices": "floor(j*T/(level_changes+1)), j=1,...,level_changes",
+    "level_increments": ["-1", "-1/2", "1/2", "1"],
+    "jitter": ["-1/8", "0", "0", "0", "1/8"],
+    "sampling": "At each t>=1, first apply a uniformly sampled level increment if t is a change index, then add an independently sampled jitter to the current level. The initial observation is zero."
+  },
+  "cost_convention": "Charge the initial refresh; decisions precede output; discrepancy at each refresh is zero; threshold comparison is strict >.",
+  "checks": [
+    "72 distinct generated paths and 288 path/charge combinations",
+    "exact schedule replay and decomposition J=lambda*N+D",
+    "zero initial and refresh discrepancies",
+    "every evaluated policy has cost at least the offline DP cost",
+    "existing anytime and clipped analytical bounds"
+  ],
+  "normalization": "J/sqrt(lambda*T*V), evaluated in floating point only for this summary; null if V=0",
+  "selection": "All specified paths, charges and policies are reported."
+}

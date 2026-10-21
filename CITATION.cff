@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript for the theoretical results and this software when using the implementation."
+type: software
+title: "The Cost of Missed States: Online Tracking with Current-Observation Resets — Reference Code"
+authors:
+  - family-names: Usami
+    given-names: Hiroyasu
+license: MIT
+version: 1.0.0
+date-released: "2026-10-22"
+url: "https://github.com/usamihiroyasu/missed-states"
+repository-code: "https://github.com/usamihiroyasu/missed-states"
+keywords:
+  - online algorithms
+  - tracking
+  - competitive analysis
+preferred-citation:
+  type: unpublished
+  title: "The Cost of Missed States: Online Tracking with Current-Observation Resets"
+  authors:
+    - family-names: Usami
+      given-names: Hiroyasu
+  year: 2026
