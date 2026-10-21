@@ -8,6 +8,8 @@ Hiroyasu Usami
 
 Reference code and exact synthetic examples for the [companion manuscript](paper/main.pdf). A policy retains one state and may reset only to the current observation. Its full history is available; offline knows the future and obeys the same reset rule.
 
+The manuscript has been submitted to IEEE Access.
+
 [Main results](#main-results) · [Quickstart](#quickstart) · [Code and data](#code-and-data) · [Citation](#citation)
 
 ![A common prefix presents two possible centers. Missing the center selected by the continuation forces repeated refreshes; offline retains that center with two refreshes.](assets/missed-states.png)
