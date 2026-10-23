@@ -4,6 +4,8 @@
 
 Hiroyasu Usami
 
+[arXiv:2610.30505](https://arxiv.org/abs/2610.30505) · [PDF](paper/main.pdf)
+
 **An online tracker can remember a useful state and still be unable to restore it.**
 
 Reference code and exact synthetic examples for the [companion manuscript](paper/main.pdf). A policy retains one state and may reset only to the current observation. Its full history is available; offline knows the future and obeys the same reset rule.
@@ -58,11 +60,14 @@ The benchmark recomputes 72 seeded paths and all 1,728 policy records, writing r
 ## Citation
 
 ```bibtex
-@unpublished{usami2026missedstates,
+@misc{usami2026missedstates,
   author = {Usami, Hiroyasu},
   title = {The Cost of Missed States: Online Tracking with Current-Observation Resets},
   year = {2026},
-  note = {Unpublished manuscript}
+  eprint = {2610.30505},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.DS},
+  url = {https://arxiv.org/abs/2610.30505}
 }
 ```
 

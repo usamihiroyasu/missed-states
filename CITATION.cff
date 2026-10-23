@@ -15,9 +15,15 @@ keywords:
   - tracking
   - competitive analysis
 preferred-citation:
-  type: unpublished
+  type: article
   title: "The Cost of Missed States: Online Tracking with Current-Observation Resets"
   authors:
     - family-names: Usami
       given-names: Hiroyasu
   year: 2026
+  journal: arXiv
+  url: "https://arxiv.org/abs/2610.30505"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.30505"
+      description: "arXiv preprint identifier"

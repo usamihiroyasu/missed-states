@@ -76,7 +76,7 @@ All four drawing commands accept `--output-dir`; PDFs default to `artifacts/figu
 
 For the theoretical results, cite:
 
-H. Usami, “The Cost of Missed States: Online Tracking with Current-Observation Resets,” unpublished manuscript, 2026.
+H. Usami, “The Cost of Missed States: Online Tracking with Current-Observation Resets,” arXiv:2610.30505 [cs.DS], 2026. [Paper](https://arxiv.org/abs/2610.30505).
 
 When using the implementation, also cite the reference code. `CITATION.cff` records the paper as the preferred citation and retains the software metadata. `CITATIONS.bib` provides both BibTeX entries.
 
